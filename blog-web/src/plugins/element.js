@@ -1,0 +1,89 @@
+import Vue from 'vue'
+import {
+  Button,
+  Message,
+  MessageBox,
+  Form,
+  FormItem,
+  Input,
+  Tooltip,
+  Loading,
+  Breadcrumb,
+  BreadcrumbItem,
+  Card,
+  Pagination,
+  Timeline,
+  TimelineItem,
+  Tabs,
+  TabPane,
+  Container,
+  Aside,
+  Menu,
+  Submenu,
+  MenuItem,
+  Header,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  Main,
+  Table,
+  TableColumn,
+  Switch,
+  Row,
+  Col,
+  Footer,
+  Progress,
+  Carousel,
+  CarouselItem,
+  Dialog,
+  Upload,
+  Select,
+  Option,
+  Divider,
+  Backtop,
+  Popover
+} from 'element-ui'
+
+Vue.use(Popover)
+Vue.use(Backtop)
+Vue.use(Divider)
+Vue.use(Option)
+Vue.use(Select)
+Vue.use(Upload)
+Vue.use(Dialog)
+Vue.use(CarouselItem)
+Vue.use(Carousel)
+Vue.use(Progress)
+Vue.use(Footer)
+Vue.use(Col)
+Vue.use(Row)
+Vue.use(Switch)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Main)
+Vue.use(DropdownItem)
+Vue.use(DropdownMenu)
+Vue.use(Dropdown)
+Vue.use(Header)
+Vue.use(MenuItem)
+Vue.use(Submenu)
+Vue.use(Menu)
+Vue.use(Aside)
+Vue.use(Container)
+Vue.use(TabPane)
+Vue.use(Tabs)
+Vue.use(Timeline)
+Vue.use(TimelineItem)
+Vue.use(Pagination)
+Vue.use(Card)
+Vue.use(Button)
+Vue.use(Form)
+Vue.use(FormItem)
+Vue.use(Input)
+Vue.use(Tooltip)
+Vue.use(Loading)
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
+
+Vue.prototype.$message = Message
+Vue.prototype.$confirm = MessageBox.confirm

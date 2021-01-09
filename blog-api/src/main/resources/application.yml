@@ -1,0 +1,59 @@
+server:
+  port: 8360
+  compression:
+    enabled: true # 开启gzip压缩
+
+#================== 数据库相关配置 ==================
+spring:
+  application:
+    name: kuro-blog
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///blog?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+  servlet:
+    multipart:
+      max-file-size: 3MB # 最大请求文件大小
+  #main:
+    #allow-bean-definition-overriding: true
+
+#================== mybatis配置 ==================
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 开启控制台打印 sql
+    map-underscore-to-camel-case: true                    # 下划线转驼峰配置
+  mapper-locations: classpath:mapper/*.xml                # 配置扫描
+  type-aliases-package: com.kuro.model.**                 # 配置xml的结果别名
+
+#================== 阿里对象存储oss配置 ==================
+alioss:
+  endpoint: 
+  accessKeyId: 
+  accessKeySecret: 
+  bucketName: 
+
+#================== jwt密钥配置以及短信服务 ==================
+blog:
+  jwt:
+    secret:  # 登录校验的密钥
+    pubKeyPath: F:\\rsa\\rsa.pub # 公钥地址
+    priKeyPath: F:\\rsa\\rsa.pri # 私钥地址
+    expire: 90 # 过期时间,单位分钟
+  sms:
+    accessKeyId:  # 你自己的accessKeyId
+    accessKeySecret:  # 你自己的AccessKeySecret
+    signName:  # 签名名称
+    verifyCodeTemplate:  # 模板名称
+
+#================== 日志文件配置 ==================
+logging:
+  level:
+    root: info
+    org.blog: debug
+  file:
+    name: log/blog.log
